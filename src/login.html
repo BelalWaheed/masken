@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link href="./output.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/all.min.css">
 </head>
+
 <body class="bg-slate-900 text-slate-200 flex flex-col min-h-screen">
 
 
@@ -14,32 +16,40 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <a href="index.html" class="flex items-center gap-3 cursor-pointer">
-                    <div class="w-10 h-10 bg-yellow-500 text-slate-900 rounded-xl flex items-center justify-center text-xl shadow-lg transform rotate-3">
+                    <div
+                        class="w-10 h-10 bg-yellow-500 text-slate-900 rounded-xl flex items-center justify-center text-xl shadow-lg transform rotate-3">
                         <i class="fa-solid fa-house"></i>
                     </div>
                     <span class="font-bold text-2xl text-yellow-400 tracking-tight">Maskan</span>
                 </a>
-                
+
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="index.html" class="text-slate-300 font-medium hover:text-yellow-400 transition">Home</a>
                     <div class="relative group">
                         <button class="text-slate-300 font-medium hover:text-yellow-400 transition flex items-center">
                             Properties <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
                         </button>
-                        <div class="absolute left-0 mt-2 w-48 bg-slate-800 rounded-xl shadow-lg py-2 border border-slate-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                            <a href="residential.html" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-700 hover:text-yellow-400 transition-colors">Residential</a>
-                            <a href="commercial.html" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-700 hover:text-yellow-400 transition-colors">Commercial</a>
-                            <a href="industrial.html" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-700 hover:text-yellow-400 transition-colors">Industrial</a>
+                        <div
+                            class="absolute left-0 mt-2 w-48 bg-slate-800 rounded-xl shadow-lg py-2 border border-slate-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <a href="residential.html"
+                                class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-700 hover:text-yellow-400 transition-colors">Residential</a>
+                            <a href="commercial.html"
+                                class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-700 hover:text-yellow-400 transition-colors">Commercial</a>
+                            <a href="industrial.html"
+                                class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-700 hover:text-yellow-400 transition-colors">Industrial</a>
                         </div>
                     </div>
                     <a href="about.html" class="text-slate-300 font-medium hover:text-yellow-400 transition">About</a>
-                    <a href="contact.html" class="text-slate-300 font-medium hover:text-yellow-400 transition">Contact</a>
-                    <a href="login.html" class="text-yellow-400 font-semibold hover:text-yellow-300 transition">Login</a>
+                    <a href="contact.html"
+                        class="text-slate-300 font-medium hover:text-yellow-400 transition">Contact</a>
+                    <a href="login.html"
+                        class="text-yellow-400 font-semibold hover:text-yellow-300 transition">Login</a>
                 </div>
 
 
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-button" class="text-slate-300 hover:text-yellow-400 transition-colors focus:outline-none">
+                    <button id="mobile-menu-button"
+                        class="text-slate-300 hover:text-yellow-400 transition-colors focus:outline-none">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
@@ -61,50 +71,52 @@
 
     <main class="grow flex items-center justify-center py-32 px-4 relative overflow-hidden">
         <div class="absolute inset-0 pattern-overlay opacity-20"></div>
-        
+
         <div class="max-w-md w-full bg-slate-800 rounded-3xl p-10 border border-slate-700 shadow-2xl relative z-10">
             <div class="text-center mb-10">
                 <h1 class="text-3xl font-bold text-slate-100 mb-2">Welcome Back</h1>
                 <p class="text-slate-400">Login to manage your property inquiries.</p>
             </div>
 
-            <form class="space-y-6">
+            <form id="loginForm" class="space-y-6" novalidate>
                 <div>
                     <label class="block text-sm font-medium text-slate-300 mb-2">Email Address</label>
                     <div class="relative">
                         <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-slate-500">
                             <i class="fa-solid fa-envelope"></i>
                         </span>
-                        <input type="email" placeholder="name@company.com" class="block w-full pl-11 pr-4 py-3 bg-slate-900 border border-slate-700 rounded-xl text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all">
+                        <input type="email" id="loginEmail" placeholder="name@company.com"
+                            class="block w-full pl-11 pr-4 py-3 bg-slate-900 border border-slate-700 rounded-xl text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all">
                     </div>
+                    <span id="loginEmailError" class="text-sm font-medium text-red-400 mt-2 hidden"></span>
                 </div>
 
                 <div>
                     <div class="flex justify-between mb-2">
                         <label class="block text-sm font-medium text-slate-300">Password</label>
-                        <a href="#" class="text-xs text-yellow-500 hover:text-yellow-400 transition">Forgot Password?</a>
                     </div>
                     <div class="relative">
                         <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-slate-500">
                             <i class="fa-solid fa-lock"></i>
                         </span>
-                        <input type="password" placeholder="••••••••" class="block w-full pl-11 pr-4 py-3 bg-slate-900 border border-slate-700 rounded-xl text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all">
+                        <input type="password" id="loginPassword" placeholder="••••••••"
+                            class="block w-full pl-11 pr-4 py-3 bg-slate-900 border border-slate-700 rounded-xl text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all">
                     </div>
+                    <span id="loginPasswordError" class="text-sm font-medium text-red-400 mt-2 hidden"></span>
                 </div>
 
-                <div class="flex items-center">
-                    <input type="checkbox" class="w-4 h-4 rounded border-slate-700 bg-slate-900 text-yellow-500 focus:ring-yellow-500 focus:ring-offset-slate-800 transition">
-                    <label class="ml-2 block text-sm text-slate-400">Remember me</label>
-                </div>
 
-                <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold py-3 px-4 rounded-xl transition-all shadow-lg hover:shadow-yellow-500/20 transform hover:-translate-y-0.5">
+                <button type="submit"
+                    class="w-full bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold py-3 px-4 rounded-xl transition-all shadow-lg hover:shadow-yellow-500/20 transform hover:-translate-y-0.5">
                     Sign In
                 </button>
+                <div id="loginFormError" class="text-base font-bold text-red-400 text-center mt-4 hidden"></div>
             </form>
 
             <div class="mt-8 text-center text-sm text-slate-400">
-                Don't have an account? 
-                <a href="register.html" class="text-yellow-500 font-semibold hover:text-yellow-400 transition">Create account</a>
+                Don't have an account?
+                <a href="register.html" class="text-yellow-500 font-semibold hover:text-yellow-400 transition">Create
+                    account</a>
             </div>
         </div>
     </main>
@@ -114,27 +126,35 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
             <div>
                 <div class="flex items-center gap-3 mb-6">
-                    <div class="w-10 h-10 bg-yellow-500 text-slate-900 rounded-xl flex items-center justify-center text-lg transform rotate-3">
+                    <div
+                        class="w-10 h-10 bg-yellow-500 text-slate-900 rounded-xl flex items-center justify-center text-lg transform rotate-3">
                         <i class="fa-solid fa-house"></i>
                     </div>
                     <span class="font-bold text-2xl text-yellow-400 tracking-tight">Maskan</span>
                 </div>
-                <p class="text-sm leading-relaxed mb-6">Designed for a better property experience. &copy; 2026 Maskan. All rights reserved.</p>
+                <p class="text-sm leading-relaxed mb-6">Designed for a better property experience. &copy; 2026 Maskan.
+                    All rights reserved.</p>
                 <div class="flex space-x-5">
-                    <a href="#" class="text-slate-400 hover:text-yellow-500 transition transform hover:scale-110"><i class="fa-brands fa-facebook text-2xl"></i></a>
-                    <a href="#" class="text-slate-400 hover:text-yellow-400 transition transform hover:scale-110"><i class="fa-brands fa-linkedin text-2xl"></i></a>
-                    <a href="#" class="text-slate-400 hover:text-pink-500 transition transform hover:scale-110"><i class="fa-brands fa-instagram text-2xl"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-yellow-500 transition transform hover:scale-110"><i
+                            class="fa-brands fa-facebook text-2xl"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-yellow-400 transition transform hover:scale-110"><i
+                            class="fa-brands fa-linkedin text-2xl"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-pink-500 transition transform hover:scale-110"><i
+                            class="fa-brands fa-instagram text-2xl"></i></a>
                 </div>
                 <div class="mt-6 text-sm space-y-2">
-                    <p class="flex items-center"><i class="fa-solid fa-phone mr-3 text-yellow-500"></i> +201231231230</p>
-                    <p class="flex items-center"><i class="fa-solid fa-envelope mr-3 text-yellow-500"></i> MaskanTeam@gmail.com</p>
+                    <p class="flex items-center"><i class="fa-solid fa-phone mr-3 text-yellow-500"></i> +201231231230
+                    </p>
+                    <p class="flex items-center"><i class="fa-solid fa-envelope mr-3 text-yellow-500"></i>
+                        MaskanTeam@gmail.com</p>
                 </div>
             </div>
 
             <div>
                 <h4 class="text-white font-semibold mb-6 text-lg text-center md:text-left">Visit Us!</h4>
                 <p class="text-sm mb-3 text-center md:text-left">We'd love to welcome you to our office.</p>
-                <p class="text-sm font-medium text-yellow-400 text-center md:text-left leading-relaxed">123 Real Estate Street, Nasr City,<br>Cairo, Egypt</p>
+                <p class="text-sm font-medium text-yellow-400 text-center md:text-left leading-relaxed">123 Real Estate
+                    Street, Nasr City,<br>Cairo, Egypt</p>
                 <p class="text-sm mt-3 text-center md:text-left flex items-center justify-center md:justify-start">
                     <i class="fa-regular fa-clock mr-2 text-slate-500"></i> Sat-Thu : 10AM-4PM
                 </p>
@@ -143,14 +163,13 @@
             <div>
                 <h4 class="text-white font-semibold mb-6 text-lg text-center md:text-left">About Maskan</h4>
                 <p class="text-sm leading-relaxed text-center md:text-left">
-                    Your trusted platform for finding the best commercial, residential, and industrial properties all in one place. We bridge the gap between properties and people.
+                    Your trusted platform for finding the best commercial, residential, and industrial properties all in
+                    one place. We bridge the gap between properties and people.
                 </p>
             </div>
         </div>
     </footer>
     <script src="./scripts.js"></script>
 </body>
+
 </html>
-
-
-
