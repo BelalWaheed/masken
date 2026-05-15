@@ -1,0 +1,21 @@
+{
+  "outputDirectory": ".",
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/src/index.html"
+    },
+    {
+      "source": "/(index|about|contact|login|register|residential|commercial|industrial|property-detail).html",
+      "destination": "/src/$1.html"
+    },
+    {
+      "source": "/output.css",
+      "destination": "/src/output.css"
+    },
+    {
+      "source": "/scripts.js",
+      "destination": "/src/scripts.js"
+    }
+  ]
+}
