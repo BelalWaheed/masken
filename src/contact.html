@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Maskan</title>
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/all.min.css">
+</head>
+<body class="bg-slate-900 text-slate-200 flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-nav border-b border-slate-800 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center gap-3 cursor-pointer">
+                    <div class="w-10 h-10 bg-yellow-500 text-slate-900 rounded-xl flex items-center justify-center text-xl shadow-lg transform rotate-3">
+                        <i class="fa-solid fa-house"></i>
+                    </div>
+                    <span class="font-bold text-2xl text-yellow-400 tracking-tight">Maskan</span>
+                </a>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-slate-300 font-medium hover:text-yellow-400 transition">Home</a>
+                    <div class="relative group">
+                        <button class="text-slate-300 font-medium hover:text-yellow-400 transition flex items-center">
+                            Properties <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-48 bg-slate-800 rounded-xl shadow-lg py-2 border border-slate-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <a href="residential.html" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-700 hover:text-yellow-400 transition-colors">Residential</a>
+                            <a href="commercial.html" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-700 hover:text-yellow-400 transition-colors">Commercial</a>
+                            <a href="industrial.html" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-700 hover:text-yellow-400 transition-colors">Industrial</a>
+                        </div>
+                    </div>
+                    <a href="about.html" class="text-slate-300 font-medium hover:text-yellow-400 transition">About</a>
+                    <a href="contact.html" class="text-yellow-400 font-semibold hover:text-yellow-300 transition">Contact</a>
+                    <a href="login.html" class="text-slate-300 font-medium hover:text-yellow-400 transition">Profile</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-slate-300 hover:text-yellow-400 transition-colors focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-800 border-t border-slate-700 py-4 px-6 space-y-4">
+            <a href="index.html" class="block text-slate-300 hover:text-yellow-400">Home</a>
+            <a href="residential.html" class="block text-slate-300 hover:text-yellow-400">Residential</a>
+            <a href="commercial.html" class="block text-slate-300 hover:text-yellow-400">Commercial</a>
+            <a href="industrial.html" class="block text-slate-300 hover:text-yellow-400">Industrial</a>
+            <a href="about.html" class="block text-slate-300 hover:text-yellow-400">About</a>
+            <a href="contact.html" class="block text-yellow-400 font-semibold">Contact</a>
+            <a href="login.html" class="block text-slate-300 hover:text-yellow-400">Profile</a>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <div class="header-bg pt-32 pb-20 px-4 text-center text-white mt-20 relative overflow-hidden">
+        <div class="absolute inset-0 pattern-overlay opacity-30"></div>
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 tracking-tight animate-fade-in-up">
+                Contact <span class="text-transparent bg-clip-text bg-linear-to-r from-yellow-400 to-yellow-200">Our Team</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-300 font-light mt-6 leading-relaxed max-w-2xl mx-auto animate-fade-in-up" style="animation-delay: 0.2s;">
+                Have questions or need a personalized tour? Reach out to us<br>
+                and our experts will get back to you shortly.
+            </p>
+        </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 grow">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            
+            <!-- Contact Info -->
+            <div class="lg:col-span-1 space-y-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-100 mb-6">Get in Touch</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center text-yellow-500 shrink-0 border border-slate-700">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-200">Office Location</h4>
+                                <p class="text-slate-400 text-sm mt-1">123 Real Estate Street, Nasr City, Cairo, Egypt</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center text-yellow-500 shrink-0 border border-slate-700">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-200">Phone Number</h4>
+                                <p class="text-slate-400 text-sm mt-1">+20 123 123 1230</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center text-yellow-500 shrink-0 border border-slate-700">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-200">Email Address</h4>
+                                <p class="text-slate-400 text-sm mt-1">MaskanTeam@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Links -->
+                <div class="pt-8 border-t border-slate-800">
+                    <h4 class="font-semibold text-slate-200 mb-4">Follow Us</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-yellow-500 hover:border-yellow-500 transition-all border border-slate-700">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-yellow-500 hover:border-yellow-500 transition-all border border-slate-700">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-pink-500 hover:border-pink-500 transition-all border border-slate-700">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <div class="lg:col-span-2">
+                <div class="bg-slate-800 rounded-3xl p-8 md:p-12 border border-slate-700 shadow-xl">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-300 mb-2">Full Name</label>
+                                <input type="text" placeholder="John Doe" class="block w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-xl text-slate-200 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-300 mb-2">Email Address</label>
+                                <input type="email" placeholder="john@example.com" class="block w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-xl text-slate-200 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-all">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Property Interest</label>
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                                <label class="flex items-center gap-3 bg-slate-900 px-4 py-3 rounded-xl border border-slate-700 cursor-pointer hover:border-yellow-500 transition-all group">
+                                    <input type="radio" name="interest" value="residential" class="w-4 h-4 text-yellow-500 bg-slate-900 border-slate-700 focus:ring-yellow-500">
+                                    <span class="text-sm text-slate-400 group-hover:text-slate-200">Residential</span>
+                                </label>
+                                <label class="flex items-center gap-3 bg-slate-900 px-4 py-3 rounded-xl border border-slate-700 cursor-pointer hover:border-yellow-500 transition-all group">
+                                    <input type="radio" name="interest" value="commercial" class="w-4 h-4 text-yellow-500 bg-slate-900 border-slate-700 focus:ring-yellow-500">
+                                    <span class="text-sm text-slate-400 group-hover:text-slate-200">Commercial</span>
+                                </label>
+                                <label class="flex items-center gap-3 bg-slate-900 px-4 py-3 rounded-xl border border-slate-700 cursor-pointer hover:border-yellow-500 transition-all group">
+                                    <input type="radio" name="interest" value="industrial" class="w-4 h-4 text-yellow-500 bg-slate-900 border-slate-700 focus:ring-yellow-500">
+                                    <span class="text-sm text-slate-400 group-hover:text-slate-200">Industrial</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Your Message</label>
+                            <textarea rows="5" placeholder="Tell us about what you're looking for..." class="block w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-xl text-slate-200 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-all"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full md:w-auto bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold py-4 px-12 rounded-xl transition-all shadow-lg hover:shadow-yellow-500/20 transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                            Send Message <i class="fa-solid fa-paper-plane text-sm"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-16 mt-auto border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div>
+                <h4 class="text-white font-semibold mb-6 text-lg">Support</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="#" class="hover:text-yellow-400 transition">Help Center</a></li>
+                    <li><a href="#" class="hover:text-yellow-400 transition">FAQs</a></li>
+                    <li><a href="#" class="hover:text-yellow-400 transition">Privacy policy</a></li>
+                    <li><a href="#" class="hover:text-yellow-400 transition">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 bg-yellow-500 text-slate-900 rounded-xl flex items-center justify-center text-lg transform rotate-3">
+                        <i class="fa-solid fa-house"></i>
+                    </div>
+                    <span class="font-bold text-2xl text-yellow-400 tracking-tight">Maskan</span>
+                </div>
+                <p class="text-sm leading-relaxed mb-6">Designed for a better property experience. &copy; 2026 Maskan. All rights reserved.</p>
+                <div class="flex space-x-5">
+                    <a href="#" class="text-slate-400 hover:text-yellow-500 transition transform hover:scale-110"><i class="fa-brands fa-facebook text-2xl"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-yellow-400 transition transform hover:scale-110"><i class="fa-brands fa-linkedin text-2xl"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-pink-500 transition transform hover:scale-110"><i class="fa-brands fa-instagram text-2xl"></i></a>
+                </div>
+                <div class="mt-6 text-sm space-y-2">
+                    <p class="flex items-center"><i class="fa-solid fa-phone mr-3 text-yellow-500"></i> +201231231230</p>
+                    <p class="flex items-center"><i class="fa-solid fa-envelope mr-3 text-yellow-500"></i> MaskanTeam@gmail.com</p>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-white font-semibold mb-6 text-lg text-center md:text-left">Visit Us!</h4>
+                <p class="text-sm mb-3 text-center md:text-left">We'd love to welcome you to our office.</p>
+                <p class="text-sm font-medium text-yellow-400 text-center md:text-left leading-relaxed">123 Real Estate Street, Nasr City,<br>Cairo, Egypt</p>
+                <p class="text-sm mt-3 text-center md:text-left flex items-center justify-center md:justify-start">
+                    <i class="fa-regular fa-clock mr-2 text-slate-500"></i> Sat-Thu : 10AM-4PM
+                </p>
+            </div>
+
+            <div>
+                <h4 class="text-white font-semibold mb-6 text-lg text-center md:text-left">About Maskan</h4>
+                <p class="text-sm leading-relaxed text-center md:text-left">
+                    Your trusted platform for finding the best commercial, residential, and industrial properties all in one place. We bridge the gap between properties and people.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="./scripts.js"></script>
+</body>
+</html>
+
+
+
+
