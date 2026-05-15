@@ -3,7 +3,7 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   
-  /* Register Custom Animations */
+  
   --animate-fade-in-up: fade-in-up 0.8s ease-out forwards;
   
   @keyframes fade-in-up {

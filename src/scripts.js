@@ -86,7 +86,7 @@ const properties = {
     'workshop': {
         title: 'Modern Workshop Space',
         price: '960,000 EGP',
-        image: '../assets/img/workshop.jpg',
+        image: '../assets/img/workshop_v2.png',
         size: '840 m²',
         beds: '0',
         baths: '2',
@@ -98,7 +98,7 @@ const properties = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile Menu Toggle
+
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
 
@@ -108,14 +108,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Dynamic Property Loading
+
     const urlParams = new URLSearchParams(window.location.search);
     const propertyId = urlParams.get('id');
 
     if (propertyId && properties[propertyId]) {
         const data = properties[propertyId];
         
-        // Update Page Content
+
         document.getElementById('prop-title').textContent = data.title;
         document.getElementById('prop-price').textContent = data.price;
         document.getElementById('prop-location').textContent = data.location;
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('prop-baths').textContent = data.baths;
         document.getElementById('prop-image').src = data.image;
 
-        // Update Features
+
         const featureContainer = document.getElementById('prop-features');
         if (featureContainer) {
             featureContainer.innerHTML = '';
